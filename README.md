@@ -71,6 +71,37 @@ npm run dev
 
 Open http://localhost:3000.
 
+## Run with Docker (one command)
+
+A multi-stage Dockerfile builds a slim production image using Next.js
+standalone output. SQLite data persists in a named volume.
+
+```bash
+docker compose up --build
+```
+
+Then open http://localhost:3000.
+
+- Image is built from `Dockerfile` and tagged `abdul-ahad-omer-portfolio:latest`
+- Schema is auto-pushed on first boot via `docker/entrypoint.sh`
+- Inquiry data persists in the `omer-data` volume at `/data/dev.db`
+- Stop with `docker compose down`; reset DB with `docker compose down -v`
+
+## Deploy to Vercel (zero-config)
+
+1. Push this branch to GitHub
+2. https://vercel.com/new → import the repo → select this branch
+3. Click **Deploy** — `vercel.json` ships the build command and env defaults
+
+You'll get a `*.vercel.app` URL in ~2 minutes.
+
+> SQLite on Vercel runs out of `/tmp` (ephemeral per cold start). The site
+> and all reads work perfectly; the inquiry form will persist within a
+> warm function lifetime but won't survive scale-to-zero. For durable
+> production storage, swap `DATABASE_URL` to a hosted Postgres
+> (Vercel Postgres, Neon, Supabase) and change the Prisma `datasource`
+> provider to `postgresql`.
+
 ## Brand identity
 
 - **Ink Black** `#05070A`

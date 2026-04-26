@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05070A"/>
+      <stop offset="100%" stop-color="#0A0D12"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.7" cy="0.2" r="0.7">
+      <stop offset="0%" stop-color="#1E90FF" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#05070A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="text" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#3FA9FF"/>
+      <stop offset="100%" stop-color="#39FF7A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g stroke="rgba(255,255,255,0.05)" stroke-width="1">
+    <path d="M0 80 H1200 M0 160 H1200 M0 240 H1200 M0 320 H1200 M0 400 H1200 M0 480 H1200 M0 560 H1200"/>
+    <path d="M80 0 V630 M200 0 V630 M320 0 V630 M440 0 V630 M560 0 V630 M680 0 V630 M800 0 V630 M920 0 V630 M1040 0 V630"/>
+  </g>
+  <text x="80" y="180" font-family="Bebas Neue, Impact, sans-serif" font-size="40" fill="#1E90FF" letter-spacing="6">ATTACKING MIDFIELDER · NO. 10</text>
+  <text x="80" y="320" font-family="Bebas Neue, Impact, sans-serif" font-size="140" fill="url(#text)" letter-spacing="2">ABDUL AHAD OMER</text>
+  <text x="80" y="420" font-family="Bebas Neue, Impact, sans-serif" font-size="80" fill="#FFFFFF" letter-spacing="1">@10</text>
+  <text x="80" y="500" font-family="Inter, sans-serif" font-size="24" fill="rgba(255,255,255,0.7)">Vision. Tempo. Decision.</text>
+  <g transform="translate(960,100)">
+    <circle cx="80" cy="80" r="78" fill="none" stroke="#1E90FF" stroke-width="2"/>
+    <text x="80" y="110" text-anchor="middle" font-family="Bebas Neue, Impact, sans-serif" font-size="100" fill="#1E90FF">10</text>
+  </g>
+</svg>

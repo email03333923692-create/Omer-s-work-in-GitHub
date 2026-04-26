@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink-950 text-white antialiased font-sans selection:bg-electric/40 selection:text-white;
+    background-image:
+      radial-gradient(60% 50% at 50% -10%, rgba(30, 144, 255, 0.18) 0%, rgba(5, 7, 10, 0) 70%),
+      linear-gradient(180deg, #05070A 0%, #05070A 100%);
+    background-attachment: fixed;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0a0d12;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e242e;
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2a3140;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+
+  .glass {
+    @apply rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-md;
+  }
+
+  .glass-strong {
+    @apply rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-xl;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold uppercase tracking-wider transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply btn bg-electric text-white hover:bg-electric-600 shadow-glow hover:shadow-[0_0_36px_rgba(30,144,255,0.55)];
+  }
+
+  .btn-neon {
+    @apply btn bg-neon text-ink-950 hover:bg-neon-600 hover:text-white shadow-neon hover:shadow-[0_0_36px_rgba(57,255,122,0.55)];
+  }
+
+  .btn-ghost {
+    @apply btn border border-white/15 bg-white/[0.02] text-white hover:bg-white/10;
+  }
+
+  .section {
+    @apply py-20 sm:py-28;
+  }
+
+  .display-h1 {
+    @apply font-display text-5xl sm:text-7xl md:text-8xl leading-[0.9] tracking-tight uppercase;
+  }
+
+  .display-h2 {
+    @apply font-display text-4xl sm:text-5xl md:text-6xl leading-[0.95] tracking-tight uppercase;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.25em] text-electric;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg, #ffffff 0%, #3FA9FF 60%, #39FF7A 100%);
+  }
+}
+
+@layer utilities {
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 60%, transparent 100%);
+  }
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  }
+}
